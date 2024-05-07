@@ -7,3 +7,4 @@ const ncNewsAPI = axios.create({
 export function getAllArticles() {
     return ncNewsAPI.get("/articles")
 }
+
