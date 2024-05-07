@@ -11,7 +11,6 @@ const [err, setErr] = useState(false)
 useEffect(() => {
     getAllArticles()
     .then((response) => {
-        // console.log(response)
         setLoading(false)
         setArticles(response.data.articles)
     })
