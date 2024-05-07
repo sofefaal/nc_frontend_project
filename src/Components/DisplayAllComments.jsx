@@ -24,7 +24,7 @@ function DisplayAllComments() {
             return (
               <div key={comment.comment_id}>
                 <h4>{comment.author}</h4>
-                <p className="comments-created-at">🕛 {comment.created_at}</p>
+                <p className="comments-created-at">🕛 Posted {new Date(comment.created_at).toLocaleDateString()}</p>
                 <p>{comment.body}</p>
 
                 <table>
