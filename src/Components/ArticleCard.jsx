@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 function ArticleCard({ article }) {
-    // console.log(article)
+
   return (
     <section className="article-card">
       <Link to={`/articles/${article.article_id}`}>
