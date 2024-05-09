@@ -5,12 +5,14 @@ import DisplayAllComments from "./DisplayAllComments"
 import UserVotes from "./UserVotes"
 
 
+
 function SingleArticle() {
    
     const [article, setArticle] = useState({})
     const {article_id} = useParams()
     const [loading, setLoading] = useState(false)
     const [err, setErr] = useState(false)
+    const [comments, setComments] = useState([]);
 
     useEffect(() => {
         getArticleByID(article_id)
@@ -47,7 +49,7 @@ function SingleArticle() {
         <div>
           <UserVotes article_id={article_id} votes={article.votes} />
         </div>
-        <DisplayAllComments />
+        <DisplayAllComments comments={comments} />
       </section>
     );
 

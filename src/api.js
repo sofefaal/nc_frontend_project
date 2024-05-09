@@ -22,6 +22,18 @@ export function getAllUsers() {
 
 export function patchArticleVotesById(article_id, votes) {
   return ncNewsAPI.patch(`/articles/${article_id}`, {inc_votes: votes});
-
   
+}
+
+export function postComments(id, username, comment) {
+  return ncNewsAPI.post(`/articles/${id}/comments`, {
+    username: username,
+    body: comment, 
+  })
+  .then(({data}) => {
+    return data
+  })
+  .catch((error) => {
+    console.log(error)
+  })
 }
