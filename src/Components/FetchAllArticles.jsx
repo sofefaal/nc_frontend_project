@@ -30,7 +30,7 @@ if(loading) {
 return(
     <section>
         <h2>The latest breaking news</h2>
-        <div className="article-list">
+        <div className="article-list" >
             {articles.map((article) => {
                 return <ArticleCard key={article.id} article={article}/>
                
