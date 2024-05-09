@@ -11,7 +11,7 @@ function DisplayAllComments() {
         getArticleComments(article_id)
         .then((response) => {
             setComments(response.data.comments)
-            console.log(response.data.comments);
+           
         })
 
     }, [])

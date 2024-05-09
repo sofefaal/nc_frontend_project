@@ -19,3 +19,9 @@ export function getArticleComments(article_id) {
 export function getAllUsers() {
   return ncNewsAPI.get('/users')
 }
+
+export function patchArticleVotesById(article_id, votes) {
+  return ncNewsAPI.patch(`/articles/${article_id}`, {inc_votes: votes});
+
+  
+}
