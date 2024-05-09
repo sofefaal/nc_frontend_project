@@ -4,11 +4,13 @@ import Header from "./Components/Header";
 import "./App.css";
 import SingleArticle from "./Components/SingleArticle";
 import { UserProvider } from "./context/UserContext";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <div>
+      <ToastContainer />
       <UserProvider>
         <Header />
         <Routes>
