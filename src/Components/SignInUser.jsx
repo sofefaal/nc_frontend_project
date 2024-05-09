@@ -21,7 +21,7 @@ function SignInUser() {
 
     }, []);
     
-  console.log(selectedUser);
+
   return (
     <section>
       <button onClick={handleSelectUser} disabled={isLoggedIn}>
