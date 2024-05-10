@@ -4,8 +4,10 @@ const ncNewsAPI = axios.create({
   baseURL: 'https://backend-project-m2ru.onrender.com/api',
 });
 
-export function getAllArticles() {
-  return ncNewsAPI.get('/articles');
+export function getAllArticles(topic) {
+  return ncNewsAPI.get('/articles', {
+    params: {topic: topic}
+  });
 }
 
 export function getArticleByID(article_id) {
@@ -43,4 +45,8 @@ export function deleteComment(comment_id) {
   .then(({data}) => {
     return data
   })
+}
+
+export function getTopics() {
+  return ncNewsAPI.get('/topics',)
 }

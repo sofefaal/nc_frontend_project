@@ -27,8 +27,14 @@ function DisplayAllComments() {
         return toast.error("You cannot delete this comment!")
       }
  
-      setComments(comments.filter((comment) => comment.comment_id !== commentId))
-      toast.success("Comment deleted")
+      deleteComment(commentId)
+      .then(() => {
+        setComments(comments.filter((comment) => comment.comment_id !== commentId))
+        toast.success("Comment deleted")
+      })
+      .catch(error => {
+        toast.error("Sorry😔, failed to delete comment. Please try again later.")
+      })
     }
 
     return (

@@ -23,7 +23,7 @@ function SignInUser() {
     
 
   return (
-    <section>
+    <section className="sign-in-container">
       <button className="sign-in" onClick={handleSelectUser} disabled={isLoggedIn}>
         {isLoggedIn ? (
           <>
