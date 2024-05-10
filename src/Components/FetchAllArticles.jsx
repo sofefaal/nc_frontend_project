@@ -3,6 +3,7 @@ import { getAllArticles } from "../api";
 import ArticleCard from "./ArticleCard";
 import Loading from "./icons/Loading";
 import { useParams } from "react-router-dom";
+import ErrorPage from "./ErrorPage";
 
 function FetchAllArticles() {
   const [articles, setArticles] = useState([]);
@@ -23,9 +24,12 @@ function FetchAllArticles() {
 
   if (err) {
     return (
+      <>
+      <ErrorPage />
       <p>
-        Sorry <s>Reddit</s>Nc News could not find articles
+        Sorry <s>Reddit</s> Nc News could not find articles
       </p>
+      </>
     );
   }
 

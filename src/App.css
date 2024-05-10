@@ -60,6 +60,22 @@ body {
   text-align: center;
 }
 
+.error-404 {
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.error-send-homepage {
+  text-align: center;
+}
+
+.error-message {
+  text-align: center;
+  margin-top: 20px;
+}
+
 .navbar-list {
   list-style-type: none;
   padding: 8px 0 10px 0;

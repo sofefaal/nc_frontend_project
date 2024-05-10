@@ -8,6 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NavBar from "./Components/NavBar";
 import FetchAllArticles from "./Components/FetchAllArticles";
+import ErrorPage from "./Components/ErrorPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/:topic" element={<FetchAllArticles />} />
           <Route path="/" element={<Home />} />
           <Route path="/articles/:article_id" element={<SingleArticle />} />
+          <Route path="/*" element={<ErrorPage/>} />
         </Routes>
       </UserProvider>
     </div>
