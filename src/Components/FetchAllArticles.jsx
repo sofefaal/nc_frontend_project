@@ -1,54 +1,53 @@
-import {useEffect, useState} from "react"
-import { getAllArticles } from "../api"
-import ArticleCard from "./ArticleCard"
-import Loading from "./icons/Loading"
-import { useParams } from "react-router-dom"
-
+import { useEffect, useState } from "react";
+import { getAllArticles } from "../api";
+import ArticleCard from "./ArticleCard";
+import Loading from "./icons/Loading";
+import { useParams } from "react-router-dom";
 
 function FetchAllArticles() {
-const [articles, setArticles] = useState([])
-const [loading, setLoading] = useState(true)
-const [err, setErr] = useState(false)
-const { topic } = useParams();
+  const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [err, setErr] = useState(false);
+  const { topic } = useParams();
 
-useEffect(() => {
+  useEffect(() => {
     getAllArticles(topic)
-    .then((response) => {
-        setLoading(false)
-        setArticles(response.data.articles)
-    })
-    .catch((err) => {
-        setErr(true)
-    })
-}, [topic])
+      .then((response) => {
+        setLoading(false);
+        setArticles(response.data.articles);
+      })
+      .catch((err) => {
+        setErr(true);
+      });
+  }, [topic]);
 
+  if (err) {
+    return (
+      <p>
+        Sorry <s>Reddit</s>Nc News could not find articles
+      </p>
+    );
+  }
 
-
-if(err) {
-    return <p>Sorry <s>Reddit</s>Nc News could not find articles</p>
-}
-
-if(loading) {
-    return( 
-        <> 
+  if (loading) {
+    return (
+      <>
         <Loading />
         <p className="page-loading">Page loading, please wait...</p>
-        </>
-    )
-}
+      </>
+    );
+  }
 
-return(
+  return (
     <section>
-        <h2 className="breaking-news">The latest breaking news</h2>
-        <div className="article-list" >
-            {articles.map((article) => {
-                return <ArticleCard key={article.id} article={article}/>
-               
-            })}
-        </div>
+      <h2 className="breaking-news">The latest breaking news</h2>
+      <div className="article-list">
+        {articles.map((article) => {
+          return <ArticleCard key={article.id} article={article} />;
+        })}
+      </div>
     </section>
-)
-
+  );
 }
 
-export default FetchAllArticles
+export default FetchAllArticles;
