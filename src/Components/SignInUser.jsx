@@ -24,7 +24,7 @@ function SignInUser() {
 
   return (
     <section>
-      <button onClick={handleSelectUser} disabled={isLoggedIn}>
+      <button className="sign-in" onClick={handleSelectUser} disabled={isLoggedIn}>
         {isLoggedIn ? (
           <>
             <img
