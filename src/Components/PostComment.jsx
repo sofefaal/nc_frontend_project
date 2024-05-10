@@ -19,7 +19,7 @@ function PostComment({article_id, setComments}) {
             setComments(response.data.comments)
         })
         setPostComment("")
-        toast.success('Yay! you postsed a new comment 😊') 
+        toast.success('Yay! you posted a new comment 😊') 
     })
     .catch((err) => {
          toast.error("Error posting comment. Please try again later.")

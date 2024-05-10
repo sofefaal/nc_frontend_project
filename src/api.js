@@ -37,3 +37,10 @@ export function postComments(id, username, comment) {
     console.log(error)
   })
 }
+
+export function deleteComment(comment_id) {
+  return ncNewsAPI.delete(`/comments/${comment_id}`)
+  .then(({data}) => {
+    return data
+  })
+}
