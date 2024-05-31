@@ -32,13 +32,27 @@ function decreaseVotes() {
 
 }
 
-return(
-    <>
-    <p>{votes + userVote} Vote</p>
-    <button disabled={userVote === +1} onClick={increaseVotes}> <ThumbsUp/> </button>
-    <button disabled={userVote === -1} onClick={decreaseVotes}> <ThumbsDown/> </button>
-    </>
-)
+return (
+  <>
+    <p>Votes: {votes + userVote} </p>
+    <button
+      className="vote-button"
+      disabled={userVote === +1}
+      onClick={increaseVotes}
+    >
+      {" "}
+      <ThumbsUp />{" "}
+    </button>
+    <button
+      className="vote-button"
+      disabled={userVote === -1}
+      onClick={decreaseVotes}
+    >
+      {" "}
+      <ThumbsDown />{" "}
+    </button>
+  </>
+);
 }
 
 export default UserVotes

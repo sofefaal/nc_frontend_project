@@ -38,14 +38,16 @@ function SingleArticle() {
 
     return (
       <section className="single-article">
-        <h2>{article.title}</h2>
-        <p>🕛 {new Date(article.created_at).toLocaleDateString()}</p>
-        <img src={article.article_img_url} alt={article.title} />
+        <h2 className="single-article-title">{article.title}</h2>
+        <img className="article-image" src={article.article_img_url} alt={article.title} />
         <div>
           <h3>By {article.author}</h3>
-          <p>Nc News</p>
+          <h4>Nc News</h4>
+        <p>🕛 {new Date(article.created_at).toLocaleDateString()}</p>
         </div>
+        <br></br>
         <p>{article.body}</p>
+        <br></br>
         <div>
           <UserVotes article_id={article_id} votes={article.votes} />
         </div>

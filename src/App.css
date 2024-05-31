@@ -9,6 +9,7 @@
   font-size: 30px;
   background-color: #901e2d;
   color: #fff;
+  padding-left: 20px;
 }
 
 body {
@@ -140,4 +141,71 @@ body {
 
 .breaking-news {
   margin-bottom: 10px;
+}
+
+.single-article-title {
+  text-align: center;
+}
+
+.article-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 20px;
+}
+
+.single-article {
+  padding: 20px;
+}
+
+.vote-button {
+  margin: 10px
+}
+
+.postComment {
+  padding: 0.9em;
+  margin: 0.9em;
+  border: lightgray;
+  border-style: solid;
+  border-width: 1px;
+  width: 90%;
+}
+
+.submit-button {
+  background-color: #901e2d;
+  color:#fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.submit-button:hover {
+  background-color: #470c14;
+}
+
+.comments-created-at {
+ font-weight: bold; 
+}
+
+.likes-dislikes {
+  font-weight: bold;
+}
+
+.delete-button {
+  background-color: #901e2d;
+  color:#fff;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  margin: 5px
+  
+}
+
+.delete-button:hover {
+  background-color: #470c14;
 }

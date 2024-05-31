@@ -30,7 +30,7 @@ function PostComment({ article_id, setComments }) {
     <form className="comment-box" method="post" onSubmit={handleSubmit}>
       <label>
         <textarea
-          name="postComment"
+          className="postComment"
           defaultValue={postComment}
           placeholder="Type your comment here..."
           onChange={(e) => setPostComment(e.target.value)}
@@ -38,7 +38,7 @@ function PostComment({ article_id, setComments }) {
           cols={40}
         />
       </label>
-      <button type="submit">Submit Comment</button>
+      <button className="submit-button"type="submit">Submit Comment</button>
     </form>
   );
 }

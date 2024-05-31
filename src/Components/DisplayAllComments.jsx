@@ -56,13 +56,17 @@ function DisplayAllComments() {
             <table>
               <tbody>
                 <tr>
-                  <td>Likes: {comment.votes >= 0 ? comment.votes : 0}</td>
-                  <td>dislikes: {comment.votes < 0 ? comment.votes : 0}</td>
+                  <td className="likes-dislikes">
+                    Likes 💖: {comment.votes >= 0 ? comment.votes : 0}
+                  </td>
+                  <td className="likes-dislikes">
+                    Dislikes ❌: {comment.votes < 0 ? comment.votes : 0}
+                  </td>
                 </tr>
               </tbody>
             </table>
             {comment.author === username && (
-              <button onClick={() => deleteCommentById(comment.comment_id)}>
+              <button className="delete-button" onClick={() => deleteCommentById(comment.comment_id)}>
                 Delete❌
               </button>
             )}
