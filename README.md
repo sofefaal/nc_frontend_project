@@ -7,6 +7,7 @@ This project was built using React and styling was done using CSS
 
 <li>Backend - Live API: <a href="https://backend-project-m2ru.onrender.com/api">https://backend-project-m2ru.onrender.com/api</a></li>
 <li>Backend - Git Hub repo: <a href="https://github.com/sofefaal/backend_project">https://github.com/sofefaal/backend_project</a></li>
+<li>Hosted Web app - Nc News: <a href="https://ncnewss.netlify.app/">https://ncnewss.netlify.app/</a></li>
 
 <p>
 Here are the following steps to get this repo working in your terminal: 
@@ -17,7 +18,10 @@ Here are the following steps to get this repo working in your terminal:
 <p>First you will need to fork this repo and clone it using this url:</p>
 <a href="https://github.com/sofefaal/nc_frontend_project/">https://github.com/sofefaal/nc_frontend_project/</a>
 
+<br>
 <p>On your terminal, navigate into the repo folder:</p>
+</br>
+
 
 ```sh
 cd nc_frontend_project
@@ -39,4 +43,4 @@ npm run dev
 <h1>Project Summary</h1>
 
 <li><b>Functionality:</b> Users can read articles, vote articles, post and delete comments so longer they are logged in</li>
-<li><b>Authentication:</b>In order to post and delete comments, user will have to click on the "Sign in" button on the top right corner, there is no sign in authentication, however; this has been hard-coded and the account name is "Cooljmessy</li>
+<li><b>Authentication:</b> In order to post and delete comments, user will have to click on the "Sign in" button on the top right corner, there is no sign in authentication, however; this has been hard-coded and the account name is "Cooljmessy"</li>
