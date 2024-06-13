@@ -13,6 +13,9 @@ function PostComment({ article_id, setComments }) {
     if (!username) {
       return toast.error("You must be signed in to post a new comment");
     }
+    if(!postComment) {
+      return toast.error("Comment cannot be empty")
+    }
     postComments(article_id, username, postComment)
       .then(() => {
         getArticleComments(article_id).then((response) => {
